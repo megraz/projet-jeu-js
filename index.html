@@ -10,48 +10,64 @@
 </head>
 
 <body>
-    <section class="ensemble">
+    <div id="obscure">
+        <header>
+            <section class="ensemble">
+                <article class="stats1">
+                    <h1>Joueur côté obscure</h1>
+                    <div class="pvies1">
+                        <h2>Points de Vie</h2>
+                    </div>
+                    <div class="energie1">
+                        <h2>Energie</h2>
+                    </div>
+                </article>
+            </section>
+        </header>
         <main>
+            <section class="dark">
+                <article class="perso1">
+                    <img src="sprite-star_wars/darth-vader3.png" />
+                </article>
+            </section>
         </main>
-        <article class="stats1">
-            <h1>Joueur côté obscure</h1>
-            <div class="pvies1">
-                <h2>Points de Vie</h2>
-            </div>
-            <div class="energie1">
-                <h2>Energie</h2>
-            </div>
-        </article>
-        <article class="stats2">
-            <h1>Joueur côté clair de la force</h1>
-            <div class="pvies2">
-                <h2>Points de Vie</h2>
-            </div>
-            <div class="energie2">
-                <h2>Energie</h2>
-            </div>
-        </article>
-        <section class="dark" style="float: left">
-            <article class="perso1">
-                <img src="sprite-star_wars/darth-vader3.png" />
-            </article>
-            <article>
-                <button id="btn1">attack</button>
-                <button id="btn2">avoid</button>
-                <button id="btn3">treat</button>
-            </article>
-        </section>
-        <section class="hero" style="float: right">
-            <article class="perso2">
-                <img src="sprite-star_wars/yoda4a.png" />
-            </article>
-            <article>
+        <footer>
+
+            <button id="btn1">attack</button>
+            <button id="btn2">avoid</button>
+            <button id="btn3">treat</button>
+
+        </footer>
+    </div>
+    <div id="clair">
+        <header>
+            <section class="ensemble2">
+                <article class="stats2">
+                    <h1>Joueur côté clair de la force</h1>
+                    <div class="pvies2">
+                        <h2>Points de Vie</h2>
+                    </div>
+                    <div class="energie2">
+                        <h2>Energie</h2>
+                    </div>
+                </article>
+        </header>
+        <main>
+            <section class="hero">
+                <article class="perso2">
+                    <img src="sprite-star_wars/yoda4a.png" />
+                </article>
+            </section>
+        </main>
+        <footer>
+            <article class="heroperso">
                 <button id="btn4">attack</button>
                 <button id="btn5">avoid</button>
                 <button id="btn6">treat</button>
             </article>
+        </footer>
         </section>
-    </section>
+    </div>
     <script type="text/javascript" src="main.js"></script>
 </body>
 

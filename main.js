@@ -11,13 +11,12 @@ let perso1 = {
     nom: "Vader",
     pointsvie: 100,
     energie: 380
-}
+};
+
 let perso2 = {
     nom: "Yoda",
     pointsvie: 100,
     energie: 300
-}
+};
 
 //attaques
-
-function()
