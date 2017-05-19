@@ -132,3 +132,11 @@ button {
     border: none;
     border-radius: 100px;
 }
+
+#btn1:hover {
+    color: grey;
+}
+
+p {
+    color: yellow;
+}
