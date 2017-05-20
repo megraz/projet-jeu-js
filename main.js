@@ -24,51 +24,35 @@ bn1.addEventListener("click", function() {
 });*/
 
 // Points de vie et energie
-//attack vader sur yoda
+/*attack vader sur yoda 
+qd il enlève des pv à yoda il perd de l'energie mais gagne des pv*/
 document.querySelector("#btn1").addEventListener("click", function() {
     if (perso1.pointsvie <= 0) {
         alert("GAME OVER!")
     }
     perso1.pointsvie = perso1.pointsvie - 7;
-
     document.querySelector(".pointsyoda").textContent = perso1.pointsvie;
+
+    perso1.pointsvie = perso1.pointsvie + 17;
+    document.querySelector(".pointsvader").textContent = perso1.pointsvie;
+
+    perso1.energie = perso1.energie - 15;
+    document.querySelector(".energievader").textContent = perso1.energie;
+
 });
 
-//attack yoda sur vader
+/*attack yoda sur vader
+qd il enlève des pv à vader il perd de l'energie mais gagne des pv*/
 document.querySelector("#btn4").addEventListener("click", function() {
     if (perso2.pointsvie <= 0) {
         alert("GAME OVER!")
     }
     perso2.pointsvie = perso2.pointsvie - 7;
-
     document.querySelector(".pointsvader").textContent = perso2.pointsvie;
+
+    perso2.pointsvie = perso2.pointsvie + 17;
+    document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
+
+    perso2.energie = perso2.energie - 15;
+    document.querySelector(".energieyoda").textContent = perso2.energie;
 });
-
-
-
-
-
-
-
-
-
-
-
-/*attaques et energie
-function vaderAttack() {
-    yoda.pointsvie = yoda.pointsvie - 20;
-}
-
-function yodaAttack() {
-    vader.pointsvie = vader.pointsvie - 30;
-}
-
-function afficherEnergieVader() {
-    let energie1 = document.querySelector(".energiedark");
-    energie1.innerHTML = vader.energie;
-}
-
-function afficherEnergieYoda() {
-    let energie2 = document.querySelector(".energie2");
-    energie2.innerHTML = yoda.energie;
-}*/
