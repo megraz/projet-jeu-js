@@ -36,7 +36,7 @@ function statsPvVader() {
 let btn1 = document.querySelector("#btn1");
 btn1.addEventListener("click", function() {
     if (perso2.pointsvie <= 0) {
-        alert("GAME OVER!")
+        alert("PERDU TU AS!")
     }
     vaderAttack();
     statsPvYoda();
@@ -51,7 +51,7 @@ btn1.addEventListener("click", function() {
 let btn4 = document.querySelector("#btn4");
 btn4.addEventListener("click", function() {
     if (perso1.pointsvie <= 0) {
-        alert("GAME OVER!")
+        alert("C'est à croire qu'il est protégé par la Force")
     }
     yodaAttack();
     statsPvVader();
