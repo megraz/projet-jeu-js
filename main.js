@@ -42,6 +42,8 @@ btn1.addEventListener("click", function() {
     statsPvYoda();
     perso1.energie = perso1.energie - 5;
     document.querySelector(".energievader").textContent = perso1.energie;
+    perso1.pointsvie = perso1.pointsvie + 15;
+    document.querySelector(".pointsvader").textContent = perso1.pointsvie;
 });
 
 
@@ -55,6 +57,8 @@ btn4.addEventListener("click", function() {
     statsPvVader();
     perso2.energie = perso2.energie - 5;
     document.querySelector(".energieyoda").textContent = perso2.energie;
+    perso2.pointsvie = perso2.pointsvie + 15;
+    document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
 });
 
 
