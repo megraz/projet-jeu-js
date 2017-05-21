@@ -97,6 +97,9 @@ article.stats2 {
     right: 100px;
 }*/
 
+
+/* l'etoile = all */
+
 * {
     margin: 0;
 }
@@ -109,6 +112,9 @@ body {
     align-content: space-between;
 }
 
+
+/* nb > s'applique sur tous les enfants de body */
+
 body>div {
     width: 50vw;
     display: flex;
@@ -119,24 +125,122 @@ body>div {
     text-align: center;
 }
 
-h1,
-h2 {
-    font-family: Arial, Verdana, "Comic sans Ms";
-    color: yellow;
-}
-
 button {
     width: 100px;
     height: 100px;
-    background-color: lightgray;
     border: none;
     border-radius: 100px;
+    color: whitesmoke;
+}
+
+#btn1,
+#btn4 {
+    background: #444;
+    background: linear-gradient( #555, #2C2C2C);
+    text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5), 0 -1px 0 rgba( 255, 255, 255, 0.4);
 }
 
 #btn1:hover {
-    color: grey;
+    color: #222;
+    background: #555;
+    background: linear-gradient( #777, #333);
 }
 
+#btn4:hover {
+    color: #222;
+    background: #555;
+    background: linear-gradient( #777, #333);
+}
+
+#btn1 :active {
+    color: #000;
+    background: #444;
+    background: linear-gradient( #555, #2C2C2C);
+    box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+#btn4 :active {
+    color: #000;
+    background: #444;
+    background: linear-gradient( #555, #2C2C2C);
+    box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+#btn2,
+#btn5 {
+    background: #072e72;
+    background: linear-gradient( #6cb9e3, #0f6b9c);
+    text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+    box-shadow: 1px 1px 10px white inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+#btn2:hover {
+    color: #095f8d;
+    background: #4897c1;
+    background: linear-gradient( #6cb9e3, #146996);
+}
+
+#btn5:hover {
+    color: #095f8d;
+    background: #4897c1;
+    background: linear-gradient( #6cb9e3, #146996);
+}
+
+#btn2 :active {
+    background: #072e72;
+    background: linear-gradient( #3681ab, #0d6190);
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5), 0 -1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+#btn5 :active {
+    background: #072e72;
+    background: linear-gradient( #3681ab, #0d6190);
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5), 0 -1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+#btn3,
+#btn6 {
+    background: #d6681e;
+    background: linear-gradient( #ea813a, #bd540d);
+    text-shadow: 0px 1px 0px rgba(116, 49, 4, 0.2);
+    box-shadow: 0 0 5px rgba(211, 84, 0, 1.0), 0 -1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+#btn3:hover {
+    color: #cc4d08;
+    background: #e38005;
+    background: linear-gradient( #ffaa55, #e58309);
+}
+
+#btn6:hover {
+    color: #cc4d08;
+    background: #e38005;
+    background: linear-gradient( #ffaa55, #e58309);
+}
+
+#btn3 :active {
+    background: #d6681e;
+    background: linear-gradient( #F4A460, #FF6347);
+    box-shadow: 0 0 5px rgba(243, 156, 18, 1.0), 0 -1px 0 rgba(211, 84, 0, 1.0);
+}
+
+#btn6 :active {
+    background: #d6681e;
+    background: linear-gradient( #F4A460, #FF6347);
+    box-shadow: 0 0 5px rgba(243, 156, 18, 1.0), 0 -1px 0 rgba(211, 84, 0, 1.0);
+}
+
+@font-face {
+    font-family: "STARWARS";
+    src: url("STARWARS.eot?") format("eot"), url("STARWARS.woff") format("woff"), url("STARWARS.ttf") format("truetype"), url("STARWARS.svg#STARWARS") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,
+h2,
 p {
+    font-family: "STARWARS", sans-serif;
     color: yellow;
 }
