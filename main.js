@@ -15,7 +15,7 @@ let perso2 = {
 
 // Attaques
 function vaderAttack() {
-    perso2.pointsvie = perso2.pointsvie - 7;
+    perso2.pointsvie = perso2.pointsvie - 5;
 }
 
 function statsPvYoda() {
@@ -24,7 +24,7 @@ function statsPvYoda() {
 }
 
 function yodaAttack() {
-    perso1.pointsvie = perso1.pointsvie - 7;
+    perso1.pointsvie = perso1.pointsvie - 5;
 }
 
 function statsPvVader() {
@@ -35,18 +35,27 @@ function statsPvVader() {
 
 let btn1 = document.querySelector("#btn1");
 btn1.addEventListener("click", function() {
+    if (perso2.pointsvie <= 0) {
+        alert("GAME OVER!")
+    }
     vaderAttack();
     statsPvYoda();
+    perso1.energie = perso1.energie - 5;
+    document.querySelector(".energievader").textContent = perso1.energie;
 });
+
+
 
 let btn4 = document.querySelector("#btn4");
 btn4.addEventListener("click", function() {
+    if (perso1.pointsvie <= 0) {
+        alert("GAME OVER!")
+    }
     yodaAttack();
     statsPvVader();
-
+    perso2.energie = perso2.energie - 5;
+    document.querySelector(".energieyoda").textContent = perso2.energie;
 });
-
-
 
 
 
@@ -64,16 +73,16 @@ document.querySelector("#btn1").addEventListener("click", function() {
     if (perso1.pointsvie <= 0) {
         alert("GAME OVER!")
     }
-    perso1.pointsvie = perso1.pointsvie - 7;
+    perso1.pointsvie = perso1.pointsvie - 5;
 
     document.querySelector(".pointsyoda").textContent = perso1.pointsvie;
 
 });
 
-    perso1.pointsvie = perso1.pointsvie + 17;
+    perso1.pointsvie = perso1.pointsvie + 15;
     document.querySelector(".pointsvader").textContent = perso1.pointsvie;
 
-    perso1.energie = perso1.energie - 7;
+    perso1.energie = perso1.energie - 5;
     document.querySelector(".energievader").textContent = perso1.energie; */
 
 
@@ -83,12 +92,12 @@ document.querySelector("#btn4").addEventListener("click", function() {
     if (perso2.pointsvie <= 0) {
         alert("GAME OVER!")
     }
-    perso2.pointsvie = perso2.pointsvie - 7;
+    perso2.pointsvie = perso2.pointsvie - 5;
     document.querySelector(".pointsvader").textContent = perso2.pointsvie;
 
-    perso2.pointsvie = perso2.pointsvie + 17;
+    perso2.pointsvie = perso2.pointsvie + 15;
     document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
 
-    perso2.energie = perso2.energie - 7;
+    perso2.energie = perso2.energie - 5;
     document.querySelector(".energieyoda").textContent = perso2.energie;
 }); */
