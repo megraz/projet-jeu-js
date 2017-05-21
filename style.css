@@ -125,6 +125,24 @@ body>div {
     text-align: center;
 }
 
+@font-face {
+    font-family: "STARWARS";
+    src: url("STARWARS.eot?") format("eot"), url("STARWARS.woff") format("woff"), url("STARWARS.ttf") format("truetype"), url("STARWARS.svg#STARWARS") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "STARWARS", sans-serif;
+    color: yellow;
+}
+
+h2,
+p {
+    font-family: "STARWARS", sans-serif;
+    color: yellow;
+}
+
 button {
     width: 100px;
     height: 100px;
@@ -229,18 +247,4 @@ button {
     background: #d6681e;
     background: linear-gradient( #F4A460, #FF6347);
     box-shadow: 0 0 5px rgba(243, 156, 18, 1.0), 0 -1px 0 rgba(211, 84, 0, 1.0);
-}
-
-@font-face {
-    font-family: "STARWARS";
-    src: url("STARWARS.eot?") format("eot"), url("STARWARS.woff") format("woff"), url("STARWARS.ttf") format("truetype"), url("STARWARS.svg#STARWARS") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-h1,
-h2,
-p {
-    font-family: "STARWARS", sans-serif;
-    color: yellow;
 }
