@@ -4,13 +4,13 @@
 let perso1 = {
     nom: "vader",
     pointsvie: 100,
-    energie: 380,
+    energie: 180
 };
 
 let perso2 = {
     nom: "yoda",
     pointsvie: 100,
-    energie: 380
+    energie: 180
 };
 
 // Attaques
@@ -40,11 +40,19 @@ btn1.addEventListener("click", function() {
     }
     vaderAttack();
     statsPvYoda();
+    move();
     perso1.energie = perso1.energie - 5;
     document.querySelector(".energievader").textContent = perso1.energie;
     perso1.pointsvie = perso1.pointsvie + 15;
     document.querySelector(".pointsvader").textContent = perso1.pointsvie;
 });
+
+function move() {
+    let vader = document.querySelector(".vader");
+    let classes = vader.className;
+    vader.classList.add("vader-move");
+    //vader.classes = classes;//
+}
 
 
 
@@ -61,47 +69,38 @@ btn4.addEventListener("click", function() {
     document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
 });
 
-
-
-
-
-
-
-
-
-
-// Points de vie et energie
-/*attack vader sur yoda 
-qd il enlève des pv à yoda il perd de l'energie mais gagne des pv
-document.querySelector("#btn1").addEventListener("click", function() {
-    if (perso1.pointsvie <= 0) {
-        alert("GAME OVER!")
+let btn3 = document.querySelector("#btn3");
+btn3.addEventListener("click", function healperso1() {
+    if (perso1.energie <= 90) {} else {
+        alert("Tu ne connais pas le pouvoir du côté obscur");
+        perso1.energie = (perso1.energie) + 20;
+        vader.style.display = "none";
     }
-    perso1.pointsvie = perso1.pointsvie - 5;
-
-    document.querySelector(".pointsyoda").textContent = perso1.pointsvie;
-
 });
 
-    perso1.pointsvie = perso1.pointsvie + 15;
-    document.querySelector(".pointsvader").textContent = perso1.pointsvie;
-
-    perso1.energie = perso1.energie - 5;
-    document.querySelector(".energievader").textContent = perso1.energie; */
 
 
-/*attack yoda sur vader
-qd il enlève des pv à vader il perd de l'energie mais gagne des pv
-document.querySelector("#btn4").addEventListener("click", function() {
-    if (perso2.pointsvie <= 0) {
-        alert("GAME OVER!")
-    }
-    perso2.pointsvie = perso2.pointsvie - 5;
-    document.querySelector(".pointsvader").textContent = perso2.pointsvie;
 
-    perso2.pointsvie = perso2.pointsvie + 15;
-    document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
 
-    perso2.energie = perso2.energie - 5;
-    document.querySelector(".energieyoda").textContent = perso2.energie;
-}); */
+
+
+
+
+
+
+
+
+/*let btn2 = document.querySelector("#btn2");
+btn2.addEventListener("click", function() {
+document.querySelector(".yoda")
+});
+*/
+
+
+
+/*
+let attackMove = function() {
+    document.querySelector('#attack-sabre').addEventListener("click", function() {
+        document.querySelector('.vader').classList.remove("hidden");
+    });
+}*/
