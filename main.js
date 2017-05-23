@@ -51,10 +51,15 @@ function move() {
     let vader = document.querySelector(".vader");
     let classes = vader.className;
     vader.classList.add("vader-move");
-    //vader.classes = classes;//
+    vader.addEventListener('animationend', function() {
+        vader.className = classes;
+    })
 }
 
-
+/*Pour annuler l'animation 
+déclarer une variable qui cible la classe d'origine de l'élément
+sur lequel je rajoute ensuite une animation en lui attribuant une nouvelle classe.
+ Ensuite dans l'event 'animationend' réattribuer sa classe d'origine à l'élément.*/
 
 let btn4 = document.querySelector("#btn4");
 btn4.addEventListener("click", function() {
@@ -63,11 +68,22 @@ btn4.addEventListener("click", function() {
     }
     yodaAttack();
     statsPvVader();
+    move2();
     perso2.energie = perso2.energie - 5;
     document.querySelector(".energieyoda").textContent = perso2.energie;
     perso2.pointsvie = perso2.pointsvie + 15;
     document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
 });
+
+function move2() {
+    let yoda = document.querySelector(".yoda");
+    let classes = yoda.className;
+    yoda.classList.add("yoda-move");
+    yoda.addEventListener('animationend', function() {
+        yoda.className = classes;
+    })
+}
+
 
 let btn3 = document.querySelector("#btn3");
 btn3.addEventListener("click", function healperso1() {
@@ -77,17 +93,6 @@ btn3.addEventListener("click", function healperso1() {
         vader.style.display = "none";
     }
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*let btn2 = document.querySelector("#btn2");
