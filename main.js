@@ -56,6 +56,27 @@ function move() {
     })
 }
 
+/* recup les sabres caches */
+function toggle(id) {
+    let attacksabre = document.querySelector(id);
+    if (attacksabre.style.display == "none") {
+        attacksabre.style.display = "block";
+
+    } else {
+        attacksabre.style.display = "none";
+    }
+}
+
+function isHidden(id) {
+    return (id.offesetParent === null)
+}
+
+/*function isHidden(id) {
+    let style = window.getComputedStyle(id);
+    return (style.display === 'none')
+}
+*/
+
 /*Pour annuler l'animation 
 déclarer une variable qui cible la classe d'origine de l'élément
 sur lequel je rajoute ensuite une animation en lui attribuant une nouvelle classe.

@@ -136,9 +136,12 @@
                 }
             }
             
-            #attack-sabre {
+            .attacksabre {
                 display: none;
                 position: absolute;
+                width: 180px;
+                top: 160px;
+                left: 270px;
             }
             
             .yoda-move {

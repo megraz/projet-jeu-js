@@ -84,3 +84,27 @@ body {
         opacity: 0;
     }
 }
+
+.etoile {
+    position: relative;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
+
+figcaption {
+    font-size: 15px;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: .5em;
+    opacity: 0;
+    color: white;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
