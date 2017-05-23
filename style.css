@@ -144,6 +144,25 @@
                 left: 270px;
             }
             
+            .attacksabre-move {
+                animation-name: sabermove;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-direction: reverse;
+            }
+            
+            @keyframes sabermove {
+                0% {
+                    transform: translateX(20px);
+                }
+                50% {
+                    transform: translateX(200px);
+                }
+                100% {
+                    transform: translateX(20px);
+                }
+            }
+            
             .yoda-move {
                 animation-name: move2;
                 animation-duration: 2s;
@@ -161,4 +180,9 @@
                 100% {
                     transform: translateX(-20px);
                 }
+            }
+            
+            .ball {
+                display: none;
+                position: absolute;
             }

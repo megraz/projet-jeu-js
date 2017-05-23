@@ -41,6 +41,7 @@ btn1.addEventListener("click", function() {
     vaderAttack();
     statsPvYoda();
     move();
+    sabermove();
     perso1.energie = perso1.energie - 5;
     document.querySelector(".energievader").textContent = perso1.energie;
     perso1.pointsvie = perso1.pointsvie + 15;
@@ -71,11 +72,20 @@ function isHidden(id) {
     return (id.offesetParent === null)
 }
 
+function sabermove() {
+    let attacksabre = document.querySelector(".attacksabre");
+    let classes = attacksabre.className;
+    attacksabre.classList.add("attacksabre-move");
+    attacksabre.addEventListener('animationend', function() {
+        attacksabre.className = classes;
+    })
+}
 /*function isHidden(id) {
     let style = window.getComputedStyle(id);
     return (style.display === 'none')
 }
 */
+
 
 /*Pour annuler l'animation 
 déclarer une variable qui cible la classe d'origine de l'élément
