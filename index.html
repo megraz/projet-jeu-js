@@ -31,13 +31,14 @@
             <article class="perso1">
                 <img class="vader" src="sprite-star_wars/darth-vader3.png" />
                 <img class="attacksabre" src="sprite-star_wars/sabre_laser_vader.png" />
+                <audio autostart="false" id="sabersound" hidden src="sabrelaser5.mp3" controls loop></audio>
                 <div class="fireballd"></div>
             </article>
         </section>
 
 
         <article class="darkperso">
-            <button id="btn1">attack</button>
+            <button id="btn1" onclick="jouerSon()">attack</button>
             <button id="btn2">magic</button>
             <button id="btn3">heal</button>
         </article>

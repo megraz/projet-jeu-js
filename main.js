@@ -42,6 +42,8 @@ btn1.addEventListener("click", function() {
     statsPvYoda();
     move();
     sabermove();
+    toggle();
+    jouerSon()
     perso1.energie = perso1.energie - 5;
     document.querySelector(".energievader").textContent = perso1.energie;
     perso1.pointsvie = perso1.pointsvie + 15;
@@ -58,18 +60,18 @@ function move() {
 }
 
 /* recup les sabres caches */
-function toggle(id) {
-    let attacksabre = document.querySelector(id);
+function toggle() {
+    let attacksabre = document.querySelector(".attacksabre");
     if (attacksabre.style.display == "none") {
         attacksabre.style.display = "block";
 
     } else {
-        attacksabre.style.display = "none";
+        attacksabre.style.display = "block";
     }
 }
 
-function isHidden(id) {
-    return (id.offesetParent === null)
+function isHidden() {
+    return (attacksabre.offesetParent === null)
 }
 
 function sabermove() {
@@ -79,6 +81,11 @@ function sabermove() {
     attacksabre.addEventListener('animationend', function() {
         attacksabre.className = classes;
     })
+}
+
+function jouerSon() {
+    let sound = document.querySelector("#sabersound");
+    sound.play();
 }
 /*function isHidden(id) {
     let style = window.getComputedStyle(id);
@@ -134,7 +141,7 @@ function fireballdAnim() {
     fireballd.classList.add("fireballAnimation");
     fireballd.addEventListener("animationend", function() {
         fireballd.className = classes;
-        let i = Math.floor(steps);
+        let i = Math.floor(steps(10));
     })
 }
 
