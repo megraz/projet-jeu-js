@@ -32,7 +32,7 @@ function statsPvVader() {
     pointsvader.innerHTML = perso1.pointsvie;
 }
 
-
+//premier bouton attack//
 let btn1 = document.querySelector("#btn1");
 btn1.addEventListener("click", function() {
     if (perso2.pointsvie <= 0) {
@@ -92,6 +92,8 @@ déclarer une variable qui cible la classe d'origine de l'élément
 sur lequel je rajoute ensuite une animation en lui attribuant une nouvelle classe.
  Ensuite dans l'event 'animationend' réattribuer sa classe d'origine à l'élément.*/
 
+
+//quatrieme bouton attack idem premier//
 let btn4 = document.querySelector("#btn4");
 btn4.addEventListener("click", function() {
     if (perso1.pointsvie <= 0) {
@@ -115,7 +117,38 @@ function move2() {
     })
 }
 
+//deuxieme bouton magic//
+let btn2 = document.querySelector("#btn2");
+btn2.addEventListener("click", function magicperso1() {
+    if (perso2.pointsvie <= 0) {
+        reinitialise();
+    }
+    fireballdAnim();
+    perso2.pointsvie = perso2.pointsvie - 10;
+    document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
+});
 
+function fireballdAnim() {
+    let fireballd = document.querySelector(".fireballd");
+    let classes = fireballd.className;
+    fireballd.classList.add("fireballAnimation");
+    fireballd.addEventListener("animationend", function() {
+        fireballd.className = classes;
+        let i = Math.floor(steps);
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+//troisieme bouton heal//
 let btn3 = document.querySelector("#btn3");
 btn3.addEventListener("click", function healperso1() {
     if (perso1.energie <= 90) {} else {
