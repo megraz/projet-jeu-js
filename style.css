@@ -147,7 +147,7 @@ button {
     position: absolute;
     width: 180px;
     top: 155px;
-    left: 328px;
+    left: 370px;
 }
 
 .attacksabre-move {
@@ -162,10 +162,10 @@ button {
         transform: translateX(20px) rotate(5deg);
     }
     50% {
-        transform: translateX(200px) rotate(-2deg);
+        transform: translateX(200px) rotate(-360deg);
     }
     100% {
-        transform: translateX(20px) rotate(-7deg);
+        transform: translateX(20px) rotate(-5deg);
     }
 }
 

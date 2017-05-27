@@ -74,6 +74,12 @@ function isHidden() {
     return (attacksabre.offesetParent === null)
 }
 
+/*function isHidden(id) {
+    let style = window.getComputedStyle(id);
+    return (style.display === 'none')
+}
+*/
+
 function sabermove() {
     let attacksabre = document.querySelector(".attacksabre");
     let classes = attacksabre.className;
@@ -82,23 +88,15 @@ function sabermove() {
         attacksabre.className = classes;
     })
 }
-
-function jouerSon() {
-    let sound = document.querySelector("#sabersound");
-    sound.play();
-}
-/*function isHidden(id) {
-    let style = window.getComputedStyle(id);
-    return (style.display === 'none')
-}
-*/
-
-
 /*Pour annuler l'animation 
 déclarer une variable qui cible la classe d'origine de l'élément
 sur lequel je rajoute ensuite une animation en lui attribuant une nouvelle classe.
  Ensuite dans l'event 'animationend' réattribuer sa classe d'origine à l'élément.*/
 
+function jouerSon() {
+    let sound = document.querySelector("#sabersound");
+    sound.play();
+}
 
 //quatrieme bouton attack idem premier//
 let btn4 = document.querySelector("#btn4");
@@ -144,16 +142,6 @@ function fireballdAnim() {
         let i = Math.floor(steps(10));
     })
 }
-
-
-
-
-
-
-
-
-
-
 
 //troisieme bouton heal//
 let btn3 = document.querySelector("#btn3");
