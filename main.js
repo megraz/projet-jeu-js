@@ -36,7 +36,7 @@ function statsPvVader() {
 let btn1 = document.querySelector("#btn1");
 btn1.addEventListener("click", function() {
     if (perso2.pointsvie <= 0) {
-        alert("PERDU TU AS!")
+        alert("J’ai apporté la paix, la justice, la liberté et la sécurité à mon nouvel Empire ! ")
     }
     vaderAttack();
     statsPvYoda();
@@ -104,7 +104,7 @@ sur lequel je rajoute ensuite une animation en lui attribuant une nouvelle class
 let btn4 = document.querySelector("#btn4");
 btn4.addEventListener("click", function() {
     if (perso1.pointsvie <= 0) {
-        alert("C'est à croire qu'il est protégé par la Force")
+        alert("Robuste je suis grâce à la Force")
     }
     yodaAttack();
     statsPvVader();

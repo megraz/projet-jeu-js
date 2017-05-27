@@ -35,12 +35,14 @@ body>div {
 h1 {
     font-family: "STARWARS", sans-serif;
     color: yellow;
+    margin-left: 50px;
 }
 
 h2,
 p {
     font-family: "STARWARS", sans-serif;
     color: yellow;
+    display: inline-block;
 }
 
 button {
