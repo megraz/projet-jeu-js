@@ -107,6 +107,9 @@ btn4.addEventListener("click", function() {
     yodaAttack();
     statsPvVader();
     move2();
+    saberymove();
+    toggle();
+    jouerSon()
     gameOver();
     perso2.energie = perso2.energie - 5;
     document.querySelector(".energieyoda").textContent = perso2.energie;
@@ -121,6 +124,31 @@ function move2() {
     yoda.addEventListener('animationend', function() {
         yoda.className = classes;
     })
+}
+
+/* recup les sabres caches */
+function toggle() {
+    let attacksabrey = document.querySelector(".attacksabrey");
+    if (attacksabrey.style.display == "none") {
+        attacksabrey.style.display = "block";
+
+    } else {
+        attacksabrey.style.display = "block";
+    }
+}
+
+function saberymove() {
+    let attacksabrey = document.querySelector(".attacksabrey");
+    let classes = attacksabrey.className;
+    attacksabrey.classList.add("attacksabrey-move");
+    attacksabrey.addEventListener('animationend', function() {
+        attacksabrey.className = classes;
+    })
+}
+
+function jouerSon() {
+    let sound = document.querySelector("#sabersound");
+    sound.play();
 }
 
 //deuxieme bouton magic//

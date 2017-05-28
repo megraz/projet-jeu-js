@@ -199,6 +199,33 @@ button {
     }
 }
 
+.attacksabrey {
+    display: none;
+    position: absolute;
+    width: 180px;
+    top: 125px;
+    right: 350px;
+}
+
+.attacksabrey-move {
+    animation-name: saberymove;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+@keyframes saberymove {
+    0% {
+        transform: translateX(-20px) rotate(5deg);
+    }
+    50% {
+        transform: translateX(-200px) rotate(-360deg);
+    }
+    100% {
+        transform: translateX(-20px) rotate(-5deg);
+    }
+}
+
 .fireballd {
     display: inline-block;
     width: 50px;
