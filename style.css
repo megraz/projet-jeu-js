@@ -287,3 +287,65 @@ button {
         opacity: 1;
     }
 }
+
+.firebally {
+    display: inline-block;
+    width: 50px;
+    height: 60px;
+    background: url(sprite-star_wars/fireball-blue3.png);
+    background-size: 800px;
+    background-position: 0px 0px;
+    position: fixed;
+    top: 250px;
+    right: 350px;
+    opacity: 0;
+}
+
+.fireballyAnimation {
+    animation: animy 1s steps(10);
+}
+
+@keyframes animy {
+    10% {
+        opacity: 1;
+        background-position: 60px 0px;
+        transform: translateX(-50px);
+    }
+    20% {
+        background-position: 120px 0px;
+        transform: translateX(-100px);
+    }
+    30% {
+        background-position: 180px 0px;
+        transform: translateX(-150px);
+    }
+    40% {
+        background-position: 240x 0px;
+        transform: translateX(-200px);
+    }
+    50% {
+        background-position: 300px 0px;
+        transform: translateX(-250px);
+    }
+    60% {
+        background-position: 360px 0px;
+        transform: translateX(-300px);
+    }
+    70% {
+        background-position: 420px 0px;
+        transform: translateX(-350px);
+    }
+    80% {
+        background-position: 480px 0px;
+        transform: translateX(-400px);
+    }
+    90% {
+        background-position: 540px 0px;
+        transform: translateX(-450px);
+    }
+    100% {
+        background-position: 600px 0px;
+        transform: translateX(-500px);
+        opacity: 1;
+    }
+}

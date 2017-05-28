@@ -218,3 +218,30 @@ function gameOver() {
         gameOver.style.display = "block";
     }
 }
+
+// cinquieme bouton magic//
+let btn5 = document.querySelector("#btn5");
+btn5.addEventListener("click", function magicperso2() {
+    if (perso1.pointsvie <= 0) {
+        reinitialise();
+    }
+    fireballyAnim();
+    jouerfSon()
+    perso1.pointsvie = perso1.pointsvie - 10;
+    document.querySelector(".pointsvader").textContent = perso1.pointsvie;
+});
+
+function fireballyAnim() {
+    let firebally = document.querySelector(".firebally");
+    let classes = firebally.className;
+    firebally.classList.add("fireballyAnimation");
+    firebally.addEventListener("animationend", function() {
+        firebally.className = classes;
+        let i = Math.floor(steps(10));
+    })
+}
+
+function jouerfSon() {
+    let sound = document.querySelector("#fireballsound");
+    sound.play();
+}
