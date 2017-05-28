@@ -108,7 +108,7 @@ btn4.addEventListener("click", function() {
     statsPvVader();
     move2();
     saberymove();
-    toggle();
+    toggley();
     jouerSon()
     gameOver();
     perso2.energie = perso2.energie - 5;
@@ -127,7 +127,7 @@ function move2() {
 }
 
 /* recup les sabres caches */
-function toggle() {
+function toggley() {
     let attacksabrey = document.querySelector(".attacksabrey");
     if (attacksabrey.style.display == "none") {
         attacksabrey.style.display = "block";
