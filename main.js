@@ -3,14 +3,14 @@
 //mes personnages
 let perso1 = {
     nom: "vader",
-    pointsvie: 100,
-    energie: 180
+    pointsvie: 50,
+    energie: 60
 };
 
 let perso2 = {
     nom: "yoda",
-    pointsvie: 100,
-    energie: 180
+    pointsvie: 50,
+    energie: 60
 };
 
 // Attaques
@@ -46,7 +46,7 @@ btn1.addEventListener("click", function() {
     jouerSon()
     perso1.energie = perso1.energie - 5;
     document.querySelector(".energievader").textContent = perso1.energie;
-    perso1.pointsvie = perso1.pointsvie + 15;
+    perso1.pointsvie = perso1.pointsvie + 10;
     document.querySelector(".pointsvader").textContent = perso1.pointsvie;
 });
 
@@ -110,7 +110,7 @@ btn4.addEventListener("click", function() {
     gameOver();
     perso2.energie = perso2.energie - 5;
     document.querySelector(".energieyoda").textContent = perso2.energie;
-    perso2.pointsvie = perso2.pointsvie + 15;
+    perso2.pointsvie = perso2.pointsvie + 10;
     document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
 });
 
