@@ -145,26 +145,34 @@ function fireballdAnim() {
 
 //troisieme bouton heal//
 let btn3 = document.querySelector("#btn3");
-btn3.addEventListener("click", function healperso1() {
-    if (perso1.energie <= 90) {} else {
-        alert("Tu ne connais pas le pouvoir du côté obscur");
-        perso1.energie = (perso1.energie) + 20;
-        vader.style.display = "none";
+btn3.addEventListener("click", function() {
+    heal();
+    vaderAttack();
+    compter();
+    vader.style.display = "none";
+});
+
+function heal() {
+    console.log((perso1.pointsvie) + 5);
+    if (perso1.pointsvie <= 30) {
+        perso1.pointsvie = (perso1.pointsvie) + 5;
+        document.querySelector(".pointsvader").textContent = perso1.pointsvie;
     }
-});
+    if (perso1.pointsvie <= 25) {
+        perso1.pointsvie = (perso1.pointsvie) - 5;
+        document.querySelector(".pointsvader").textContent = perso1.pointsvie;
+        alert("Je ne peux plus utiliser le côté obscur de la Force ");
+    }
+};
 
+function compter() {
+    let nbClick = 0;
+    let nbClickMax = 3;
+    nbClick++;
+    if (nbClick >= nbClickMax) {
+        document.getElementById('#btn3').disabled = true;
+    }
+}
 
-/*let btn2 = document.querySelector("#btn2");
-btn2.addEventListener("click", function() {
-document.querySelector(".yoda")
-});
-*/
-
-
-
-/*
-let attackMove = function() {
-    document.querySelector('#attack-sabre').addEventListener("click", function() {
-        document.querySelector('.vader').classList.remove("hidden");
-    });
-}*/
+/* A partir de 30 pv on peut utiliser le bouton heal qui nous rajoute 5 pv
+au-delà de 20pv on ne peut plus*/
