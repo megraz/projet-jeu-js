@@ -70,9 +70,9 @@ function toggle() {
     }
 }
 
-function isHidden() {
+/*function isHidden() {
     return (attacksabre.offesetParent === null)
-}
+}*/
 
 /*function isHidden(id) {
     let style = window.getComputedStyle(id);
@@ -107,6 +107,7 @@ btn4.addEventListener("click", function() {
     yodaAttack();
     statsPvVader();
     move2();
+    gameOver();
     perso2.energie = perso2.energie - 5;
     document.querySelector(".energieyoda").textContent = perso2.energie;
     perso2.pointsvie = perso2.pointsvie + 15;
@@ -129,6 +130,7 @@ btn2.addEventListener("click", function magicperso1() {
         reinitialise();
     }
     fireballdAnim();
+    jouerfSon()
     perso2.pointsvie = perso2.pointsvie - 10;
     document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
 });
@@ -143,13 +145,19 @@ function fireballdAnim() {
     })
 }
 
+function jouerfSon() {
+    let sound = document.querySelector("#fireballsound");
+    sound.play();
+}
+
 //troisieme bouton heal//
 let btn3 = document.querySelector("#btn3");
 btn3.addEventListener("click", function() {
     heal();
     vaderAttack();
     compter();
-    vader.style.display = "none";
+    /* vader.style.display = "none"; la fonction display: none; 
+    masque totalement ou affiche l'élément et annule des propriétés */
 });
 
 function heal() {
@@ -176,3 +184,9 @@ function compter() {
 
 /* A partir de 30 pv on peut utiliser le bouton heal qui nous rajoute 5 pv
 au-delà de 20pv on ne peut plus*/
+
+function gameOver() {
+    if ((perso1.pointsvie === 0) || (perso2.pointsvie === 0)) {
+        gameOver.style.display = "block";
+    }
+}

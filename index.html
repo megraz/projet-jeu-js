@@ -33,6 +33,7 @@
                 <img class="attacksabre" src="sprite-star_wars/sabre_laser_vader.png" />
                 <audio autostart="false" id="sabersound" hidden src="sabrelaser5.mp3" controls></audio>
                 <div class="fireballd"></div>
+                <audio autostart="false" id="fireballsound" hidden src="racer1.mp3" controls></audio>
             </article>
         </section>
 
@@ -40,12 +41,15 @@
         <article class="darkperso">
             <button id="btn1" onclick="jouerSon()">attack</button>
             <button id="btn2">magic</button>
-            <button id="btn3">heal</button>
+            <button id="btn3" onclick="compter()">heal</button>
         </article>
     </div>
 
-    <div id="clair">
+    <div class="gameover">
+        <p>Game Over</p>
+    </div>
 
+    <div id="clair">
 
         <section class="stats2">
             <h1>Joueur côté clair de la force</h1>

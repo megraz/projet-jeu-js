@@ -45,6 +45,17 @@ p {
     display: inline-block;
 }
 
+.gameover {
+    font-family: "STARWARS", sans-serif;
+    color: yellow;
+    width: 300px;
+    height: 250;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 250px;
+    display: none;
+}
+
 button {
     width: 100px;
     height: 100px;
