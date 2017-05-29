@@ -32,11 +32,19 @@ function statsPvVader() {
     pointsvader.innerHTML = perso1.pointsvie;
 }
 
+//game over//
+function gameOver() {
+    if ((perso1.pointsvie === 0) || (perso2.pointsvie === 0)) {
+        gameOver.style.display = "block";
+    }
+}
+
 //premier bouton attack//
 let btn1 = document.querySelector("#btn1");
 btn1.addEventListener("click", function() {
     if (perso2.pointsvie <= 0) {
         alert("J’ai apporté la paix, la justice, la liberté et la sécurité à mon nouvel Empire ! ")
+        reinitialise();
     }
     vaderAttack();
     statsPvYoda();
@@ -98,59 +106,6 @@ function jouerSon() {
     sound.play();
 }
 
-//quatrieme bouton attack idem premier//
-let btn4 = document.querySelector("#btn4");
-btn4.addEventListener("click", function() {
-    if (perso1.pointsvie <= 0) {
-        alert("Robuste je suis grâce à la Force")
-    }
-    yodaAttack();
-    statsPvVader();
-    move2();
-    saberymove();
-    toggley();
-    jouerSon()
-    gameOver();
-    perso2.energie = perso2.energie - 5;
-    document.querySelector(".energieyoda").textContent = perso2.energie;
-    perso2.pointsvie = perso2.pointsvie + 10;
-    document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
-});
-
-function move2() {
-    let yoda = document.querySelector(".yoda");
-    let classes = yoda.className;
-    yoda.classList.add("yoda-move");
-    yoda.addEventListener('animationend', function() {
-        yoda.className = classes;
-    })
-}
-
-/* recup les sabres caches */
-function toggley() {
-    let attacksabrey = document.querySelector(".attacksabrey");
-    if (attacksabrey.style.display == "none") {
-        attacksabrey.style.display = "block";
-
-    } else {
-        attacksabrey.style.display = "block";
-    }
-}
-
-function saberymove() {
-    let attacksabrey = document.querySelector(".attacksabrey");
-    let classes = attacksabrey.className;
-    attacksabrey.classList.add("attacksabrey-move");
-    attacksabrey.addEventListener('animationend', function() {
-        attacksabrey.className = classes;
-    })
-}
-
-function jouerSon() {
-    let sound = document.querySelector("#sabersound");
-    sound.play();
-}
-
 //deuxieme bouton magic//
 let btn2 = document.querySelector("#btn2");
 btn2.addEventListener("click", function magicperso1() {
@@ -203,7 +158,7 @@ function heal() {
 
 function compter() {
     let nbClick = 0;
-    let nbClickMax = 2;
+    let nbClickMax = 1;
     nbClick++;
     if (nbClick >= nbClickMax) {
         document.getElementById('#btn3').disabled = true;
@@ -213,10 +168,58 @@ function compter() {
 /* A partir de 30 pv on peut utiliser le bouton heal qui nous rajoute 5 pv
 au-delà de 20pv on ne peut plus*/
 
-function gameOver() {
-    if ((perso1.pointsvie === 0) || (perso2.pointsvie === 0)) {
-        gameOver.style.display = "block";
+//quatrieme bouton attack idem premier//
+let btn4 = document.querySelector("#btn4");
+btn4.addEventListener("click", function() {
+    if (perso1.pointsvie <= 0) {
+        alert("Robuste je suis grâce à la Force")
+        reinitialise();
     }
+    yodaAttack();
+    statsPvVader();
+    move2();
+    saberymove();
+    toggley();
+    jouerSon()
+    gameOver();
+    perso2.energie = perso2.energie - 5;
+    document.querySelector(".energieyoda").textContent = perso2.energie;
+    perso2.pointsvie = perso2.pointsvie + 10;
+    document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
+});
+
+function move2() {
+    let yoda = document.querySelector(".yoda");
+    let classes = yoda.className;
+    yoda.classList.add("yoda-move");
+    yoda.addEventListener('animationend', function() {
+        yoda.className = classes;
+    })
+}
+
+/* recup les sabres caches */
+function toggley() {
+    let attacksabrey = document.querySelector(".attacksabrey");
+    if (attacksabrey.style.display == "none") {
+        attacksabrey.style.display = "block";
+
+    } else {
+        attacksabrey.style.display = "block";
+    }
+}
+
+function saberymove() {
+    let attacksabrey = document.querySelector(".attacksabrey");
+    let classes = attacksabrey.className;
+    attacksabrey.classList.add("attacksabrey-move");
+    attacksabrey.addEventListener('animationend', function() {
+        attacksabrey.className = classes;
+    })
+}
+
+function jouerSon() {
+    let sound = document.querySelector("#sabersound");
+    sound.play();
 }
 
 // cinquieme bouton magic//
@@ -251,6 +254,7 @@ let btn6 = document.querySelector("#btn6");
 btn6.addEventListener("click", function() {
     healy();
     yodaAttack();
+    comptery()
 });
 
 function healy() {
@@ -265,3 +269,12 @@ function healy() {
         alert("Personne par la guerre, ne devient grand");
     }
 };
+
+function comptery() {
+    let nbClick = 0;
+    let nbClickMax = 1;
+    nbClick++;
+    if (nbClick >= nbClickMax) {
+        document.getElementById('#btn6').disabled = true;
+    }
+}
