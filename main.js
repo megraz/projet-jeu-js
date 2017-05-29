@@ -35,7 +35,7 @@ function statsPvVader() {
 //game over//
 function gameOver() {
     if ((perso1.pointsvie === 0) || (perso2.pointsvie === 0)) {
-        gameOver.style.display = "block";
+        gameover.style.display = "block";
     }
 }
 
@@ -51,7 +51,7 @@ btn1.addEventListener("click", function() {
     move();
     sabermove();
     toggle();
-    jouerSon()
+    jouerSon();
     perso1.energie = perso1.energie - 5;
     document.querySelector(".energievader").textContent = perso1.energie;
     perso1.pointsvie = perso1.pointsvie + 10;
@@ -113,7 +113,8 @@ btn2.addEventListener("click", function magicperso1() {
         reinitialise();
     }
     fireballdAnim();
-    jouerfSon()
+    jouerfSon();
+    gameOver()
     perso2.pointsvie = perso2.pointsvie - 10;
     document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
 });
@@ -130,6 +131,7 @@ function fireballdAnim() {
 
 function jouerfSon() {
     let sound = document.querySelector("#fireballsound");
+    sound.volume = 1.0;
     sound.play();
 }
 
@@ -138,6 +140,7 @@ let btn3 = document.querySelector("#btn3");
 btn3.addEventListener("click", function() {
     heal();
     vaderAttack();
+    jouervSon()
     compter();
     /* vader.style.display = "none"; la fonction display: none; 
     masque totalement ou affiche l'élément et annule des propriétés */
@@ -155,6 +158,11 @@ function heal() {
         alert("Je ne peux plus utiliser le côté obscur de la Force ");
     }
 };
+
+function jouervSon() {
+    let sound = document.querySelector("#respivadersound");
+    sound.play();
+}
 
 function compter() {
     let nbClick = 0;
@@ -180,8 +188,7 @@ btn4.addEventListener("click", function() {
     move2();
     saberymove();
     toggley();
-    jouerSon()
-    gameOver();
+    jouerySon()
     perso2.energie = perso2.energie - 5;
     document.querySelector(".energieyoda").textContent = perso2.energie;
     perso2.pointsvie = perso2.pointsvie + 10;
@@ -217,7 +224,7 @@ function saberymove() {
     })
 }
 
-function jouerSon() {
+function jouerySon() {
     let sound = document.querySelector("#sabersound");
     sound.play();
 }
@@ -246,6 +253,7 @@ function fireballyAnim() {
 
 function jouerfSon() {
     let sound = document.querySelector("#fireballsound");
+    sound.volume = 1.0;
     sound.play();
 }
 
