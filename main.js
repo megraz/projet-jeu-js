@@ -203,7 +203,7 @@ function heal() {
 
 function compter() {
     let nbClick = 0;
-    let nbClickMax = 3;
+    let nbClickMax = 2;
     nbClick++;
     if (nbClick >= nbClickMax) {
         document.getElementById('#btn3').disabled = true;
@@ -245,3 +245,23 @@ function jouerfSon() {
     let sound = document.querySelector("#fireballsound");
     sound.play();
 }
+
+// sixieme bouton heal //
+let btn6 = document.querySelector("#btn6");
+btn6.addEventListener("click", function() {
+    healy();
+    yodaAttack();
+});
+
+function healy() {
+    console.log((perso2.pointsvie) + 5);
+    if (perso2.pointsvie <= 30) {
+        perso2.pointsvie = (perso2.pointsvie) + 5;
+        document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
+    }
+    if (perso2.pointsvie <= 25) {
+        perso2.pointsvie = (perso2.pointsvie) - 5;
+        document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
+        alert("Personne par la guerre, ne devient grand");
+    }
+};
