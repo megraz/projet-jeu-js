@@ -35,6 +35,7 @@ function statsPvVader() {
 //game over//
 function gameOver() {
     if ((perso1.pointsvie === 0) || (perso2.pointsvie === 0)) {
+        let gameover = document.querySelector(".gameover");
         gameover.style.display = "block";
     }
 }
@@ -114,7 +115,7 @@ btn2.addEventListener("click", function magicperso1() {
     }
     fireballdAnim();
     jouerfSon();
-    gameOver()
+    gameOver();
     perso2.pointsvie = perso2.pointsvie - 10;
     document.querySelector(".pointsyoda").textContent = perso2.pointsvie;
 });
@@ -188,7 +189,7 @@ btn4.addEventListener("click", function() {
     move2();
     saberymove();
     toggley();
-    jouerySon()
+    jouerySon();
     perso2.energie = perso2.energie - 5;
     document.querySelector(".energieyoda").textContent = perso2.energie;
     perso2.pointsvie = perso2.pointsvie + 10;
@@ -236,7 +237,8 @@ btn5.addEventListener("click", function magicperso2() {
         reinitialise();
     }
     fireballyAnim();
-    jouerfSon()
+    jouerfSon();
+    gameOver();
     perso1.pointsvie = perso1.pointsvie - 10;
     document.querySelector(".pointsvader").textContent = perso1.pointsvie;
 });
@@ -262,7 +264,7 @@ let btn6 = document.querySelector("#btn6");
 btn6.addEventListener("click", function() {
     healy();
     yodaAttack();
-    comptery()
+    comptery();
 });
 
 function healy() {
