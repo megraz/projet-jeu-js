@@ -265,6 +265,7 @@ btn6.addEventListener("click", function() {
     healy();
     yodaAttack();
     comptery();
+    jouerycSon();
 });
 
 function healy() {
@@ -279,6 +280,12 @@ function healy() {
         alert("Personne par la guerre, ne devient grand");
     }
 };
+
+function jouerycSon() {
+    let sound = document.querySelector("#yodaparle");
+    sound.volume = 1.0;
+    sound.play();
+}
 
 function comptery() {
     let nbClick = 0;
