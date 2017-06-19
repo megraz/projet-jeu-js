@@ -5,29 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Star Wars</title>
-    <link rel="stylesheet" href="astyle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Star Wars Game</title>
 </head>
 
 <body>
-    <audio hidden src="musicsw.mp3" controls autoplay loop></audio>
-    <div class="a-long-time-ago">A long time ago, in a galaxy far,
-        <br> far away...
-    </div>
-    <div class="crawl">
-        <div>
-            <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>
-            <p>During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-            <p>Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plan that can save her people and restore freedom to the galaxy...</p>
-        </div>
+    <div id="obscur">
 
+        <section class="stats1">
+            <h1>Joueur côté obscur</h1>
+            <div class="pvies1">
+                <p class="pointsvader">50</p>
+                <h2>Points de Vie</h2>
+            </div>
+            <div class="energie1">
+
+                <p class="energievader">60</p>
+                <h2>Energie</h2>
+            </div>
+
+        </section>
+
+
+        <section class="dark">
+            <article class="perso1">
+                <img class="vader" src="sprite-star_wars/darth-vader9.png" />
+                <img class="attacksabre" src="sprite-star_wars/sabre_laser_vader.png" />
+                <audio autostart="false" id="sabersound" hidden src="sabrelaser5.mp3" controls></audio>
+                <div class="fireballd"></div>
+                <audio autostart="false" id="fireballsound" hidden src="racer1.mp3" controls></audio>
+                <audio autostart="false" id="respivadersound" hidden src="swvader02.mp3" controls></audio>
+            </article>
+        </section>
+
+
+        <article class="darkperso">
+            <button id="btn1" onclick="jouerSon()">attack</button>
+            <button id="btn2">magic</button>
+            <button id="btn3" onclick="jouervSon()">heal</button>
+        </article>
     </div>
-    <div class="etoile">
-        <figure>
-            <a href="///home/marlene/Documents/projet-jeu-js/index.html"><img src="sprite-star_wars/starwars017.gif"></a>
-            <figcaption>Rejoins la force</figcaption>
-        </figure>
+
+    <div class="gameover">
+        <p>Game Over</p>
     </div>
+
+    <div id="clair">
+
+        <section class="stats2">
+            <h1>Joueur côté clair de la force</h1>
+            <div class="pvies2">
+                <p class="pointsyoda">50</p>
+                <h2>Points de Vie</h2>
+            </div>
+            <div class="energie2">
+                <p class="energieyoda">60</p>
+                <h2>Energie</h2>
+            </div>
+
+        </section>
+
+
+
+        <section class="hero">
+            <article class="perso2">
+                <img class="yoda" src="sprite-star_wars/yoda4a.png" />
+                <img class="attacksabrey" src="sprite-star_wars/sabre_laser_yoda.png" />
+                <div class="firebally"></div>
+                <audio autostart="false" id="yodaparle" hidden src="yodacitation2.mp3" controls></audio>
+            </article>
+        </section>
+
+
+
+        <article class="heroperso">
+            <button id="btn4">attack</button>
+            <button id="btn5">magic</button>
+            <button id="btn6" onclick="jouerycSon()">heal</button>
+        </article>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
