@@ -349,3 +349,38 @@ button {
         opacity: 1;
     }
 }
+
+
+/*reponsive*/
+
+@viewport {
+    width: device-width;
+    zoom: 1;
+}
+
+@media all and (max-width: 400px) {
+    @-ms-viewport {
+        width: device-width;
+    }
+}
+
+@-webkit-viewport {
+    width: device-width
+}
+
+@-moz-viewport {
+    width: device-width
+}
+
+@-ms-viewport {
+    width: device-width
+}
+
+@-o-viewport {
+    width: device-width
+}
+
+
+/*@media all and (max-device-width: 480px) {
+ 
+}*/
