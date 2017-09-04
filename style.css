@@ -358,7 +358,7 @@ button {
     zoom: 1;
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-device-width: 480px) {
     @-ms-viewport {
         width: device-width;
     }
